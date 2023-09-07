@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+import mongoengine
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,14 +32,19 @@ ALLOWED_HOSTS = ['192.168.0.246']
 # Application definition
 
 INSTALLED_APPS = [
-    "ideas.apps.IdeasConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ideas',
+    'graphene_django',
 ]
+
+GRAPHENE = {
+    "SCHEMA": "ideas.schema.schema"
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +86,20 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'NAME': 'ideas',
+#             'ENFORCE_SCHEMA': False,
+#             'CLIENT': {
+#                 'host': "mongo",
+#                 'port': int(27017),
+#                 'username': 'root',
+#                 'password': 'example'
+#             }  
+#         }
+# }
 
 
 # Password validation
@@ -123,3 +143,17 @@ STATIC_ROOT = '/opt/services/djangoapp/static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MONGO DB connection\
+_MONGODB_USER = "root"
+_MONGODB_PASSWD = "example"
+_MONGODB_HOST = "mongo"
+_MONGODB_NAME = "ideas"
+_MONGODB_PORT = 27017
+_MONGODB_DATABASE_HOST = "mongodb://%s:%s@%s/ideas?authSource=admin" % (
+    _MONGODB_USER,
+    _MONGODB_PASSWD,
+    _MONGODB_HOST,
+)
+
+mongoengine.connect(_MONGODB_NAME, host=_MONGODB_DATABASE_HOST)

@@ -4,9 +4,9 @@ from utils import mongo_client
 
 print(mongo_client)
 
-collection = mongo_client.get_database('test').get_collection('test')
+collection_test = mongo_client.get_database('test').get_collection('test')
 
-print(collection.find_one())
+print(collection_test.find_one())
 
 # Create your tests here.
 class IdeasTestCases(TestCase):
