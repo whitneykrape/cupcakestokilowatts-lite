@@ -11,6 +11,8 @@ COPY Pipfile /opt/services/djangoapp/src/
 RUN pip install pipenv &&\
     pipenv lock &&\
     pipenv install --system 
+
+COPY swagger-ui /opt/services/djangoapp/swagger
     
 # copy our project code
 COPY . /opt/services/djangoapp/src

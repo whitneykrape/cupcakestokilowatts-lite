@@ -23,3 +23,5 @@ class IdeasTestCases(TestCase):
             print("Connected")
         else:
             print("Not connected")
+
+    def 

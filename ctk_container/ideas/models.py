@@ -10,10 +10,13 @@ from mongoengine.fields import (
     ObjectIdField,
 )
 
+# https://github.com/graphql-python/graphene-mongo/blob/master/examples/django_mongoengine/bike/models.py
+
 class Idea(Document):
     meta = {'collection': 'idea'}    
     ID = ObjectIdField()
     name = StringField()
+    unitofenergy = StringField()
 
     def __str__(self):
         return self.name

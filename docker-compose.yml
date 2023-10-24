@@ -7,6 +7,7 @@ services:
       - .:/opt/services/djangoapp/src
       - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
       - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+      - swagger_volume:/opt/services/djangoapp/swagger  # <-- bind the static volume
     depends_on:
       - mongo
     networks:
@@ -15,11 +16,12 @@ services:
   nginx:
     image: pagespeed/nginx-pagespeed:latest
     ports:
-      - 80:80
+      - 3020:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
       - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
       - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+      - swagger_volume:/opt/services/djangoapp/swagger  # <-- bind the static volume
     depends_on:
       - mongo
       - djangoapp
@@ -54,3 +56,4 @@ networks:
 volumes:
   static_volume:  # <-- declare the static volume
   media_volume:  # <-- declare the media volume
+  swagger_volume:
