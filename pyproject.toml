@@ -4,3 +4,5 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "cupcakestokilowatts"
+authors = [{name = "FormFunctionIO", email = "hi@formfunction.io"}]
+dynamic = ["version", "description"]
