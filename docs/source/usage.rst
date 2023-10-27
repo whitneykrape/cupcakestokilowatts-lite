@@ -6,29 +6,29 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use Cupcakes to Kilowatts, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install cupcakestokilowatts_docs
 
 Creating recipes
 ----------------
 
 To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+you can use the ``cupcakestokilowatts_docs.get_random()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
+.. autofunction:: cupcakestokilowatts_docs.get_random
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+The ``kind`` parameter should be either ``"one"``, ``"other"``,
+or ``"third"``. Otherwise, :py:func:`cupcakestokilowatts_docs.get_random`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+.. autoexception:: cupcakestokilowatts_docs.InvalidKindError
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> import cupcakestokilowatts_docs
+>>> cupcakestokilowatts_docs.get_random()
+['one', 'other']
 

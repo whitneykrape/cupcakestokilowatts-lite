@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'CupcakestoKilowatts'
+copyright = '2023,FormFunctionIO'
+author = 'FormFunctionIO'
 
 release = '0.1'
 version = '0.1.0'
