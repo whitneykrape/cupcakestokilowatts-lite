@@ -9,7 +9,7 @@ author = "Form Function IO LLC"
 
 # -- General configuration ---------------------------------------------------
 # -- General configuration
-master_doc = 'source/index'
+master_doc = 'index'
 
 extensions = [
     "sphinx.ext.duration",
