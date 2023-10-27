@@ -5,8 +5,8 @@ This is a Python docstring, we can use reStructuredText syntax here!
 
 .. code-block:: python
 
-    # Import cupcakestokilowatts
-    import cupcakestokilowatts
+    # Import cupcakestokilowatts_docs
+    import cupcakestokilowatts_docs
 
     # Call its only function
     get_random(kind=["watts"])

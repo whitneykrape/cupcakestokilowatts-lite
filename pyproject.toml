@@ -3,6 +3,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "ctk_container"
+name = "cupcakestokilowatts_docs"
 authors = [{name = "FormFunctionIO", email = "hi@formfunction.io"}]
 dynamic = ["version", "description"]
