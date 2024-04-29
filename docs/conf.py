@@ -3,7 +3,7 @@ master_doc = 'index'
 # -- Project information -----------------------------------------------------
 
 project = "Cupcakes to kiloWatts"
-copyright = "2023 Form Function IO LLC"
+copyright = "2024 Form Function IO LLC"
 author = "Form Function IO LLC"
 
 
