@@ -6,11 +6,7 @@ Usage
 Installation
 ------------
 
-To use Cupcakes to Kilowatts, first install it using pip:
-
-.. code-block:: console
-
-   (.venv) $ pip install cupcakestokilowatts_docs
+To use Cupcakes to kiloWatts, first ensure you have Docker and Docker Compose installed.
 
 Creating recipes
 ----------------
