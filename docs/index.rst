@@ -9,8 +9,7 @@ how to :ref:`installation` the project.
 .. note::
 
    This project is under active development. Current the framework of the environment builds in Docker. Django, MongoDB, and GraphQL work in concert.
-   
-Smoketes.
+
 
 Contents
 --------
